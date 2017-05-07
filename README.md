@@ -1,6 +1,8 @@
 # Management
 Signs and World management, Ultimate version!
 
+### Please give feedback on the plans below by commenting [here](https://github.com/PluginsByMe/Management/issues/1)
+
 ## SIGNS
       Line 1: [WORLD]
       Line 2: worldname
