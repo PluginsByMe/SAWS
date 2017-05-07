@@ -1,0 +1,19 @@
+#####################################################################
+# _______                                                      __   #
+#|   |   |.---.-.-----.---.-.-----.-----.--------.-----.-----.|  |_ #
+#|       ||  _  |     |  _  |  _  |  -__|        |  -__|     ||   _|#
+#|__|_|__||___._|__|__|___._|___  |_____|__|__|__|_____|__|__||____|#
+#                           |_____|                                 #
+#           Signs and World management, Ultimate version!           #
+#                         By: TheRoyalBlock                         #
+#             https://github.com/PluginsByMe/Management             #
+#####################################################################
+---
+name: Management
+author:  TheRoyalBlock
+version: 1.0
+api: [2.0.0]
+main: TheRoyalBlock\Management\Main
+commands: []
+permissions: []
+...
