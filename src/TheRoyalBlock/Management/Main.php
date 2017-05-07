@@ -81,14 +81,6 @@ use pocketmine\utils\Config;
 use pocketmine\Player;
 use pocketmine\Server;
 
-//Own
-use Events\Signs;
-use Commands\CoordTP;
-use Commands\LoadWorld;
-use Commands\SeedGen;
-use Commands\TypeGen;
-use Commands\WorldTP;
-
 class Main extends PluginBase implements Listener{
     
   const PREFIX = C::GOLD . "[" . C::BLUE . "Management" . C::GOLD . "] ". C::RESET . C::WHITE;
