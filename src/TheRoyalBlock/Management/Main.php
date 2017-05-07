@@ -109,4 +109,15 @@ class Main extends PluginBase implements Listener{
             }
             return true;
             break;
-            case "coordstp":
+    case "coordstp":
+      if($sender instanceof Player) {
+                  $x = $args[0];
+                  $y = $args[1];
+                  $z = $args[2];
+                      $sender->sendMessage(self::PREFIX . "Teleporting to X: " . $x . " Y: " . $y . " Z: " . $z . "!");
+                      $sender->teleport(new Vector3($x, $y, $z));
+            } else {
+                $sender->sendMessage(self::PREFIX . "Please use the command in game.");
+            }
+            return true;
+            break;
