@@ -1,5 +1,15 @@
-# Management
-Signs and World management, Ultimate version!
+```
+#####################################################################
+# _______                                                      __   #
+#|   |   |.---.-.-----.---.-.-----.-----.--------.-----.-----.|  |_ #
+#|       ||  _  |     |  _  |  _  |  -__|        |  -__|     ||   _|#
+#|__|_|__||___._|__|__|___._|___  |_____|__|__|__|_____|__|__||____|#
+#                           |_____|                                 #
+#           Signs and World management, Ultimate version!           #
+#                         By: TheRoyalBlock                         #
+#             https://github.com/PluginsByMe/Management             #
+#####################################################################
+```
 
 ### Please give feedback on the plans below by commenting [here](https://github.com/PluginsByMe/Management/issues/1)
 
