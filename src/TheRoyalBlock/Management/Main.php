@@ -92,3 +92,29 @@ use Commands\WorldTP;
 class Main extends PluginBase implements Listener{
     
   const PREFIX = C::GOLD . "[" . C::BLUE . "Management" . C::GOLD . "] ". C::RESET . C::WHITE;
+
+      public function onEnable(){
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $this->getLogger()->info(self::PREFIX . "Plugin loaded!");
+    }
+      public function onDisable(){
+        $this->getLogger()->info(self::PREFIX . "Plugin disabled!");
+    }
+  public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
+  switch($cmd->getName()){
+    case "worldtp":
+    if($sender instanceof Player) {
+                  $worldname = $args[0];
+                  $sender->sendMessage(self::PREFIX . "Preparing world " . $worldname . "!");
+                    //Prevents most crashes
+                    if(Server::getInstance()->loadLevel($mapname) != false){
+                        $sender->sendMessage(self::PREFIX . "Teleporting to " . $worldname . "!");
+                        $event->getPlayer()->teleport(Server::getInstance()->getLevelByName($worldname)->getSafeSpawn());
+                    } else {
+                      $sender->sendMessage(self::PREFIX . "World " . $worldname . " not found. Please try using a different world.");
+            } else {
+                $sender->sendMessage(self::PREFIX . "Please use the command in game.");
+            }
+            return true;
+            break;
+            case "coordstp":
