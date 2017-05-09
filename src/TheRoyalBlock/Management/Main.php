@@ -121,3 +121,19 @@ class Main extends PluginBase implements Listener{
             }
             return true;
             break;
+      case "seedgenerate":
+				$level = $args[1];
+				$seed = $args[0];
+				$generator = null;
+				$options = null;
+					if($this->getServer()->isLevelGenerated($level) = !false){
+						$sender->sendMessage(self::PREFIX . "A world with the name " . $level . " already exists!");
+          } else {
+						$this->getServer()->broadcastMessage(self::PREFIX . "Creating world " . $level . "! Be prepared for lag!");
+						$this->getServer()->generateLevel($level, $seed, $generator, $options);
+						$this->getServer()->loadLevel($level);
+            $sender->sendMessage(self::PREFIX . "The world " . $level . " has been sucessfully created and loaded! Use /worldtp to teleport there!");
+					}
+      return true;
+      break;
+      case "typegenerate":
