@@ -1,17 +1,20 @@
 <?php
 
 #####################################################################
-# _______                                                      __   #
-#|   |   |.---.-.-----.---.-.-----.-----.--------.-----.-----.|  |_ #
-#|       ||  _  |     |  _  |  _  |  -__|        |  -__|     ||   _|#
-#|__|_|__||___._|__|__|___._|___  |_____|__|__|__|_____|__|__||____|#
-#                           |_____|                                 #
+#          _______  _______  _     _  _______  _____ _____          #
+#         |       ||   _   || | _ | ||       ||_   _|     |         #
+#         |  _____||  |_|  || || || ||  _____|  | | | | | |         #
+#         | |_____ |       ||       || |_____   |_| |_|_|_|         #
+#         |_____  ||       ||       ||_____  |                      #
+#          _____| ||   _   ||   _   | _____| |                      #
+#         |_______||__| |__||__| |__||_______|                      #
+#                 Stands for: Sign And World System™                #
 #           Signs and World management, Ultimate version!           #
 #                         By: TheRoyalBlock                         #
-#             https://github.com/PluginsByMe/Management             #
+#                https://github.com/PluginsByMe/SAWS                #
 #####################################################################
 
-namespace TheRoyalBlock\Management
+namespace TheRoyalBlock\SAWS
   
 //Blocks
 use pocketmine\block\Block;
@@ -83,7 +86,7 @@ use pocketmine\Server;
 
 class Main extends PluginBase implements Listener{
     
-  const PREFIX = C::GOLD . "[" . C::BLUE . "Management" . C::GOLD . "] ". C::RESET . C::WHITE;
+  const PREFIX = C::GOLD . "[" . C::BLUE . "SAWS™" . C::GOLD . "] ". C::RESET . C::WHITE;
 
       public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
@@ -152,7 +155,7 @@ class Main extends PluginBase implements Listener{
       break;
       case "mn-help":
 		$sender->sendMessage("------------------------------------------------");
-		$sender->sendMessage("|          Management Plugin Commands          |");
+		$sender->sendMessage("|             SAWS™ Plugin Commands            |");
 		$sender->sendMessage("| seedgenerate: Generates a world from a seed. |/n|       Usage: /seedgenerate <seed>            |");
 		$sender->sendMessage("| typegenerate:Generates a world from presets. |/n|       Usage: /typegenerate <preset>          |");
 		$sender->sendMessage("| coordtp: TP to xyz coordinates.              |/n|       Usage: /coordtp <x> <y> <z>            |");
