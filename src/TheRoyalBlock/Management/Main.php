@@ -99,7 +99,7 @@ class Main extends PluginBase implements Listener{
                   $worldname = $args[0];
                   $sender->sendMessage(self::PREFIX . "Preparing world " . $worldname . "!");
                     //Prevents most crashes
-                    if(Server::getInstance()->loadLevel($mapname) != false){
+                    if(Server::getInstance()->loadLevel($worldname) != false){
                         $sender->sendMessage(self::PREFIX . "Teleporting to " . $worldname . "!");
                         $event->getPlayer()->teleport(Server::getInstance()->getLevelByName($worldname)->getSafeSpawn());
                     } else {
@@ -137,3 +137,32 @@ class Main extends PluginBase implements Listener{
       return true;
       break;
       case "typegenerate":
+	//ToDo, Hopefully @Ad5001 will help
+      return true;
+      break;
+      case "loadworld":
+	    $worldname = $args[0];
+            $sender->sendMessage(self::PREFIX . "Preparing world " . $worldname . "!");
+                    //Prevents most crashes
+                    if(Server::getInstance()->loadLevel($worldname) != false){
+			    $sender->sendMessage(self::PREFIX . "World " . $worldname . "has been prepared!"
+                    } else {
+                      $sender->sendMessage(self::PREFIX . "World " . $worldname . " not found. Please try using a different world name.");
+      return true;
+      break;
+      case "mn-help":
+		$sender->sendMessage("------------------------------------------------");
+		$sender->sendMessage("|          Management Plugin Commands          |");
+		$sender->sendMessage("| seedgenerate: Generates a world from a seed. |/n|       Usage: /seedgenerate <seed>            |");
+		$sender->sendMessage("| typegenerate:Generates a world from presets. |/n|       Usage: /typegenerate <preset>          |");
+		$sender->sendMessage("| coordtp: TP to xyz coordinates.              |/n|       Usage: /coordtp <x> <y> <z>            |");
+		$sender->sendMessage("| worldtp: Teleport to x world.                |/n|       Usage: /worldtp <worldname>            |");
+		$sender->sendMessage("| loadworld: load ___ world.                   |/n|       Usage: /loadworld <worldname>          |");
+		$sender->sendMessage("------------------------------------------------");
+      }else{
+	$sender->sendMessage(self::PREFIX . "Command " . $cmd . "not found. Please try again or use /mn-help for a list of commands");
+      }
+	    
+	    
+	    
+	    
